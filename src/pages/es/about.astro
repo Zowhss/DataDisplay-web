@@ -1,0 +1,230 @@
+---
+import BaseLayout from "../../layout/BaseLayout.astro"
+import Footer from "../../components/Footer.astro"
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ t("about.about")}</title>
+    <link rel="icon" href="/favicon-16x16.ico">
+</head>
+<body>
+    <BaseLayout/>
+    <section id="services-296">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">{ t("about.us")}</span>
+                <h2 class="cs-title">{ t("about.in")}</h2>
+                <p class="cs-text">
+                    { t("about.we")}</p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a class="cs-link" href="">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">{ t("about.fast")}</h3>
+                        <p class="cs-item-text">
+                            { t("about.faster")}
+                        </p>
+                    </a>
+                    <picture class="cs-image"  aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="">
+                        <source media="(min-width: 601px)" srcset="">
+                        <img loading="lazy" decoding="async" src="/public/IT.jpg" alt="library" width="413" height="266">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">{ t("about.secur")}</h3>
+                        <p class="cs-item-text">
+                            { t("about.with")}
+                        </p>
+                    </a>
+                    <picture class="cs-image"  aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="">
+                        <source media="(min-width: 601px)" srcset="">
+                        <img loading="lazy" decoding="async" src="/public/IT.jpg" alt="library" width="413" height="266">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">{ t("about.supp")}</h3>
+                        <p class="cs-item-text">
+                            { t("about.support")}
+                        </p>
+                    </a>
+                    <picture class="cs-image"  aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="">
+                        <source media="(min-width: 601px)" srcset="">
+                        <img loading="lazy" decoding="async" src="/public/IT.jpg" alt="library" width="413" height="266">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a class="cs-link" href="">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
+                        <h3 class="cs-h3">{ t("about.uss")}</h3>
+                        <p class="cs-item-text">
+                            { t("about.behind")}
+                        </p>
+                    </a>
+                    <picture class="cs-image">
+                        <source media="(max-width: 600px)" srcset="">
+                        <source media="(min-width: 601px)" srcset="">
+                        <img loading="lazy" decoding="async" src="/public/IT.jpg" alt="library" width="413" height="266" aria-hidden="true">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <Footer/>
+</body>
+</html>
+
+<style>
+@media only screen and (min-width: 0rem) {
+    #services-296 {
+        padding: var(--sectionPadding);
+    }
+    #services-296 .cs-container {
+        width: 100%;
+        max-width: 43.75rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #services-296 .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services-296 .cs-title {
+        max-width: 30ch;
+    }
+    #services-296 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(1rem, 1.5vw, 1.25rem);
+    }
+    #services-296 .cs-item {
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 2rem;
+        background-color: #f7f7f7;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s;
+    }
+    #services-296 .cs-item:hover {
+        cursor: pointer;
+    }
+    #services-296 .cs-item:hover .cs-image {
+        opacity: 1;
+    }
+    #services-296 .cs-item:hover .cs-image img {
+        transform: scale(1.1);
+    }
+    #services-296 .cs-item:hover .cs-icon {
+        filter: grayscale(1) brightness(1000%);
+    }
+    #services-296 .cs-item:hover .cs-h3,
+    #services-296 .cs-item:hover .cs-item-text {
+        color: #fff;
+    }
+    #services-296 .cs-image {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: -1;
+        background-color: var(--primary);
+        transition: opacity 0.3s;
+    }
+    #services-296 .cs-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+        object-fit: cover;
+        transition: transform 0.6s;
+    }
+    #services-296 .cs-link {
+        text-decoration: none;
+    }
+    #services-296 .cs-icon {
+        width: auto;
+        height: 3rem;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+    #services-296 .cs-icon path {
+        transition: fill 0.3s;
+    }
+    #services-296 .cs-h3 {
+        font-size: clamp(1.25rem, 2vw, 1.5625rem);
+        line-height: 1.2em;
+        margin: 0;
+        margin-bottom: 1rem;
+        color: var(--headerColor);
+        transition: color 0.3s;
+        font-weight: bold;
+    }
+    #services-296 .cs-item-text {
+        font-size: 1rem;
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        transition: color 0.3s;
+    }
+}
+@media only screen and (min-width: 48rem) {
+    #services-296 .cs-card-group {
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #services-296 .cs-item {
+        width: 48.6%;
+    }
+}
+@media only screen and (min-width: 81.25rem) {
+    #services-296 .cs-container {
+        max-width: 90rem;
+    }
+    #services-296 .cs-card-group {
+        justify-content: center;
+    }
+    #services-296 .cs-item {
+        width: clamp(23.84%, 22.5vw, 23.95%);
+    }
+}
+</style>

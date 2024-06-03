@@ -1,0 +1,206 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="meet-us-1021">
+    <div class="cs-container">
+        <div class="cs-content">
+            <img class="cs-graphic" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/Ornament.svg" alt="chef" width="456" height="31">
+            <h2 class="cs-title">{ t("team.team")}</h2>
+            <p class="cs-text">
+                { t("team.text")}
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 767px)" srcset="/public/Alex.jpg">
+                    <source media="(min-width: 768px)" srcset="/public/Alex.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/public/Alex.jpg" alt="chef" width="305" height="335">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Alex Evdochin</span>
+                    <span class="cs-job">{ t("team.alex")}</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 767px)" srcset="/public/Isma.jpg">
+                    <source media="(min-width: 768px)" srcset="/public/Isma.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/public/Isma.jpg" alt="chef" width="305" height="335">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Ismail El Hamdi</span>
+                    <span class="cs-job">{ t("team.isma")}</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 767px)" srcset="/public/Roberto.jpg">
+                    <source media="(min-width: 768px)" srcset="/public/Roberto.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="/public/Roberto.jpg" alt="chef" width="305" height="335">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Roberto Ruiz</span>
+                    <span class="cs-job">{ t("team.rober")}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+@media only screen and (min-width: 0rem) {
+    #meet-us-1021 {
+        padding: var(--sectionPadding);
+        background-color: #1a1a1a;
+    }
+    #meet-us-1021 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #meet-us-1021 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #meet-us-1021 .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #meet-us-1021 .cs-graphic {
+        width: 100%;
+        max-width: 26.82352941rem;
+        margin: 0 0 1rem 0;
+    }
+    #meet-us-1021 .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+    #meet-us-1021 .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+    #meet-us-1021 .cs-title,
+    #meet-us-1021 .cs-text {
+        color: var(--bodyTextColorWhite);
+    }
+    #meet-us-1021 .cs-text {
+        opacity: 0.8;
+    }
+    #meet-us-1021 .cs-card-group {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #meet-us-1021 .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: 25.8125rem;
+        position: relative;
+        z-index: 1;
+    }
+    #meet-us-1021 .cs-item:hover .cs-picture {
+        background-color: #000;
+    }
+    #meet-us-1021 .cs-item:hover .cs-picture img {
+        transform: scale(1.1);
+        opacity: 0.6;
+    }
+    #meet-us-1021 .cs-info {
+        width: 85.5%;
+        padding: clamp(1rem, 2vw, 1.5rem);
+        margin: -3.75rem auto 0;
+        box-sizing: border-box;
+        background-color: #1a1a1a;
+        border-top: 4px solid var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 10;
+    }
+    #meet-us-1021 .cs-name {
+        font-size: clamp(1rem, 2vw, 1.5625rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 clamp(0.25rem, 1vw, 0.5rem);
+        color: var(--bodyTextColorWhite);
+        display: block;
+        transition: color 0.3s;
+    }
+    #meet-us-1021 .cs-job {
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+        display: block;
+    }
+    #meet-us-1021 .cs-picture {
+        width: 100%;
+        height: clamp(15.375rem, 40vw, 32.25rem);
+        overflow: hidden;
+        display: block;
+        position: relative;
+        transition: background-color 0.3s;
+        z-index: -1;
+    }
+    #meet-us-1021 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition:
+            transform 0.6s,
+            opacity 0.3s;
+    }
+}
+@media only screen and (min-width: 48rem) {
+    #meet-us-1021 .cs-card-group {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        width: 100%;
+    }
+    #meet-us-1021 .cs-item {
+        grid-column: span 4;
+    }
+}
+</style>
